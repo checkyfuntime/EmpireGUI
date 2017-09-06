@@ -118,13 +118,4 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="darth-vader-minimalist-keshava-shukla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\darth-vader-minimalist-keshava-shukla.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="empire_logo_black4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\empire_logo_black4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="darth-vader-darth-vader-minimalism" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\darth-vader-darth-vader-minimalism.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

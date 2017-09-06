@@ -192,7 +192,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::EmpireGUI.Properties.Resources.darth_vader_minimalist_keshava_shukla;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(475, 403);
             this.Controls.Add(this.metroLabel2);

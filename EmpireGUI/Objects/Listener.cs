@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace EmpireGUI.Objects
 {
+    //This might not be being used, remove if possible.
     public partial class listeners
     {
         public class BindIP

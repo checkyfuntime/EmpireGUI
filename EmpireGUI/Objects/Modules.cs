@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace EmpireGUI.Objects
 {
+
+    //TODO- Update code that references this class so that it can be removed. It's unneeded and can potentially be done quicker.
     public class Modules
     {
         public class Agent

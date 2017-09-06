@@ -59,35 +59,5 @@ namespace EmpireGUI.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap darth_vader_darth_vader_minimalism {
-            get {
-                object obj = ResourceManager.GetObject("darth-vader-darth-vader-minimalism", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap darth_vader_minimalist_keshava_shukla {
-            get {
-                object obj = ResourceManager.GetObject("darth-vader-minimalist-keshava-shukla", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap empire_logo_black4 {
-            get {
-                object obj = ResourceManager.GetObject("empire_logo_black4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
