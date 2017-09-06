@@ -368,6 +368,78 @@ namespace EmpireGUI
                 DrawnListenerControls.Add(lbl);
             }
         }
+        private void drawStagerOptionTextBoxes(Dictionary<string,ModuleOptions.Options> options)
+        {
+            int i = 1;
+            if (DrawnStagerControls.Count != 0)
+            {
+                foreach (Control control in DrawnStagerControls)
+                {
+                    control.Dispose();
+                }
+                DrawnStagerControls.Clear();
+
+            }
+            foreach (KeyValuePair<string, ModuleOptions.Options> pair in options)
+            {
+                int ycoord = 22 + (i * 29);
+                if (pair.Key == "Listener")
+                {
+                    MetroLabel lbl = new MetroLabel();
+                    MetroComboBox cb = new MetroComboBox();
+                    lbl.AutoSize = true;
+                    lbl.Height = 19;
+                    lbl.Theme = MetroFramework.MetroThemeStyle.Dark;
+                    lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+                    lbl.Location = new Point(436, ycoord);
+                    lbl.Name = "lblGenStag" + pair.Key;
+                    lbl.Text = pair.Key;
+                    // This check is included because the API automagically defaults to using https:// which casues issues if you don't submit CertPath.
+                    // This replaces the https:// with http:// in order to make it easier for the users generating http listeners.
+                    // Will this cause issues with other listeners? Needs more testing. - Deosn't seem to cause any issues with other listeners.
+                    cb.Name = "cbGenStag" + pair.Key;
+                    cb.Width = 182;
+                    foreach( var listener in Globals.activelisteners.listeners)
+                    {
+                        cb.Items.Add(listener.name);
+                    }
+                    cb.Height = 23;
+                    cb.Theme = MetroFramework.MetroThemeStyle.Dark;
+                    cb.Location = new Point(600, ycoord);
+                    tabGenerateStager.Controls.Add(cb);
+                    tabGenerateStager.Controls.Add(lbl);
+                    DrawnStagerControls.Add(cb);
+                    DrawnStagerControls.Add(lbl);
+                    i++;
+                }
+                else
+                {
+                    MetroLabel lbl = new MetroLabel();
+                    MetroTextBox tbval = new MetroTextBox();
+                    lbl.AutoSize = true;
+                    lbl.Height = 19;
+                    lbl.Theme = MetroFramework.MetroThemeStyle.Dark;
+                    lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+                    lbl.Location = new Point(436, ycoord);
+                    lbl.Name = "lblGenStag" + pair.Key;
+                    lbl.Text = pair.Key;
+                    // This check is included because the API automagically defaults to using https:// which casues issues if you don't submit CertPath.
+                    // This replaces the https:// with http:// in order to make it easier for the users generating http listeners.
+                    // Will this cause issues with other listeners? Needs more testing. - Deosn't seem to cause any issues with other listeners.
+                    tbval.Name = "txtGenStag" + pair.Key;
+                    tbval.Width = 182;
+                    tbval.Text = pair.Value.optionValue;
+                    tbval.Height = 23;
+                    tbval.Theme = MetroFramework.MetroThemeStyle.Dark;
+                    tbval.Location = new Point(600, ycoord);
+                    tabGenerateStager.Controls.Add(tbval);
+                    tabGenerateStager.Controls.Add(lbl);
+                    i++;
+                    DrawnStagerControls.Add(tbval);
+                    DrawnStagerControls.Add(lbl);
+                }
+            }
+        }
         private void drawModuleOptionTextBoxes(Dictionary<string, ModuleOptions.Options> options)
         {
             if (DrawnModuleControls.Count != 0)
@@ -1184,6 +1256,8 @@ namespace EmpireGUI
             }
                 string uri = "https://" + Globals.serverIP + ":" + Globals.serverPort + "/api/agents/" + currentAgent + "?token=" + Globals.apitoken;
                 string results = submitJSONRequest(uri, "", "DELETE");
+            if (results != null)
+            {
                 JObject token = JObject.Parse(results);
                 JToken msgResult = token["success"];
                 if (msgResult.ToString().ToLower() == "true")
@@ -1194,6 +1268,7 @@ namespace EmpireGUI
                 {
                     displayCustomAlert("Could not remove Agent: " + currentAgent);
                 }
+            }
             //Re-Draw agents and check if they're stale.
             //Should I put this inside the If statement?
             getAgents();

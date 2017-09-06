@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabActiveAgents = new MetroFramework.Controls.MetroTabPage();
             this.btnKillAgent = new MetroFramework.Controls.MetroButton();
@@ -88,6 +88,15 @@
             this.txtConsoleInput = new MetroFramework.Controls.MetroTextBox();
             this.txtConsoleLog = new MetroFramework.Controls.MetroTextBox();
             this.lblAgents = new MetroFramework.Controls.MetroLabel();
+            this.tabOptions = new MetroFramework.Controls.MetroTabPage();
+            this.btnRestartAPI = new MetroFramework.Controls.MetroButton();
+            this.btnShutDown = new MetroFramework.Controls.MetroButton();
+            this.btnRTJ = new MetroFramework.Controls.MetroButton();
+            this.btnChangePolling = new MetroFramework.Controls.MetroButton();
+            this.btnRefreshAll = new MetroFramework.Controls.MetroButton();
+            this.btnChangeAPIToken = new MetroFramework.Controls.MetroButton();
+            this.btnGetEmpireGUIVersion = new MetroFramework.Controls.MetroButton();
+            this.btnExit = new MetroFramework.Controls.MetroButton();
             this.tabModules = new MetroFramework.Controls.MetroTabPage();
             this.pnlModuleOptions = new MetroFramework.Controls.MetroPanel();
             this.btnSearchModules = new MetroFramework.Controls.MetroButton();
@@ -165,37 +174,28 @@
             this.colCredUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCredHost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCredPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabOptions = new MetroFramework.Controls.MetroTabPage();
-            this.btnRestartAPI = new MetroFramework.Controls.MetroButton();
-            this.btnShutDown = new MetroFramework.Controls.MetroButton();
-            this.btnRTJ = new MetroFramework.Controls.MetroButton();
-            this.btnChangePolling = new MetroFramework.Controls.MetroButton();
-            this.btnRefreshAll = new MetroFramework.Controls.MetroButton();
-            this.btnChangeAPIToken = new MetroFramework.Controls.MetroButton();
-            this.btnGetEmpireGUIVersion = new MetroFramework.Controls.MetroButton();
-            this.btnExit = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
             this.tabActiveAgents.SuspendLayout();
+            this.tabOptions.SuspendLayout();
             this.tabModules.SuspendLayout();
             this.tabListeners.SuspendLayout();
             this.ctrlListeners.SuspendLayout();
             this.tabGenerateStager.SuspendLayout();
             this.tabCredentials.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCredentials)).BeginInit();
-            this.tabOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.tabActiveAgents);
-            this.metroTabControl1.Controls.Add(this.tabOptions);
-            this.metroTabControl1.Controls.Add(this.tabModules);
             this.metroTabControl1.Controls.Add(this.tabListeners);
-            this.metroTabControl1.Controls.Add(this.tabGenerateStager);
+            this.metroTabControl1.Controls.Add(this.tabModules);
             this.metroTabControl1.Controls.Add(this.tabCredentials);
+            this.metroTabControl1.Controls.Add(this.tabGenerateStager);
+            this.metroTabControl1.Controls.Add(this.tabOptions);
             this.metroTabControl1.Location = new System.Drawing.Point(2, 6);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 5;
             this.metroTabControl1.Size = new System.Drawing.Size(1139, 670);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -814,6 +814,105 @@
             this.lblAgents.Text = "Agents";
             this.lblAgents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAgents.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // tabOptions
+            // 
+            this.tabOptions.Controls.Add(this.btnRestartAPI);
+            this.tabOptions.Controls.Add(this.btnShutDown);
+            this.tabOptions.Controls.Add(this.btnRTJ);
+            this.tabOptions.Controls.Add(this.btnChangePolling);
+            this.tabOptions.Controls.Add(this.btnRefreshAll);
+            this.tabOptions.Controls.Add(this.btnChangeAPIToken);
+            this.tabOptions.Controls.Add(this.btnGetEmpireGUIVersion);
+            this.tabOptions.Controls.Add(this.btnExit);
+            this.tabOptions.HorizontalScrollbarBarColor = true;
+            this.tabOptions.Location = new System.Drawing.Point(4, 35);
+            this.tabOptions.Name = "tabOptions";
+            this.tabOptions.Size = new System.Drawing.Size(1131, 631);
+            this.tabOptions.TabIndex = 5;
+            this.tabOptions.Text = "EmpireGUI Options";
+            this.tabOptions.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabOptions.VerticalScrollbarBarColor = true;
+            // 
+            // btnRestartAPI
+            // 
+            this.btnRestartAPI.Location = new System.Drawing.Point(3, 384);
+            this.btnRestartAPI.Name = "btnRestartAPI";
+            this.btnRestartAPI.Size = new System.Drawing.Size(148, 48);
+            this.btnRestartAPI.TabIndex = 9;
+            this.btnRestartAPI.Text = "Restart API";
+            this.btnRestartAPI.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnRestartAPI.Click += new System.EventHandler(this.btnRestartAPI_Click);
+            // 
+            // btnShutDown
+            // 
+            this.btnShutDown.Location = new System.Drawing.Point(3, 330);
+            this.btnShutDown.Name = "btnShutDown";
+            this.btnShutDown.Size = new System.Drawing.Size(148, 48);
+            this.btnShutDown.TabIndex = 8;
+            this.btnShutDown.Text = "Shutdown REST API";
+            this.btnShutDown.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnShutDown.Click += new System.EventHandler(this.btnShutDown_Click);
+            // 
+            // btnRTJ
+            // 
+            this.btnRTJ.Location = new System.Drawing.Point(3, 276);
+            this.btnRTJ.Name = "btnRTJ";
+            this.btnRTJ.Size = new System.Drawing.Size(148, 48);
+            this.btnRTJ.TabIndex = 7;
+            this.btnRTJ.Text = "Run the Jewels";
+            this.btnRTJ.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnRTJ.Click += new System.EventHandler(this.metroButton5_Click);
+            // 
+            // btnChangePolling
+            // 
+            this.btnChangePolling.Location = new System.Drawing.Point(3, 222);
+            this.btnChangePolling.Name = "btnChangePolling";
+            this.btnChangePolling.Size = new System.Drawing.Size(148, 48);
+            this.btnChangePolling.TabIndex = 6;
+            this.btnChangePolling.Text = "Change Polling Value";
+            this.btnChangePolling.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnChangePolling.Click += new System.EventHandler(this.btnChangePolling_Click);
+            // 
+            // btnRefreshAll
+            // 
+            this.btnRefreshAll.Location = new System.Drawing.Point(3, 168);
+            this.btnRefreshAll.Name = "btnRefreshAll";
+            this.btnRefreshAll.Size = new System.Drawing.Size(148, 48);
+            this.btnRefreshAll.TabIndex = 5;
+            this.btnRefreshAll.Text = "Refresh All Data";
+            this.btnRefreshAll.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnRefreshAll.Click += new System.EventHandler(this.btnRefreshAll_Click);
+            // 
+            // btnChangeAPIToken
+            // 
+            this.btnChangeAPIToken.Location = new System.Drawing.Point(3, 114);
+            this.btnChangeAPIToken.Name = "btnChangeAPIToken";
+            this.btnChangeAPIToken.Size = new System.Drawing.Size(148, 48);
+            this.btnChangeAPIToken.TabIndex = 4;
+            this.btnChangeAPIToken.Text = "Change API Token";
+            this.btnChangeAPIToken.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnChangeAPIToken.Click += new System.EventHandler(this.btnChangeAPIToken_Click);
+            // 
+            // btnGetEmpireGUIVersion
+            // 
+            this.btnGetEmpireGUIVersion.Location = new System.Drawing.Point(3, 6);
+            this.btnGetEmpireGUIVersion.Name = "btnGetEmpireGUIVersion";
+            this.btnGetEmpireGUIVersion.Size = new System.Drawing.Size(148, 48);
+            this.btnGetEmpireGUIVersion.TabIndex = 3;
+            this.btnGetEmpireGUIVersion.Text = "Get EmpireGUI Version";
+            this.btnGetEmpireGUIVersion.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnGetEmpireGUIVersion.Click += new System.EventHandler(this.btnGetEmpireGUIVersion_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(3, 60);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(148, 48);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit Empire GUI";
+            this.btnExit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // tabModules
             // 
@@ -1665,14 +1764,14 @@
             this.dgCredentials.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgCredentials.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.dgCredentials.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCredentials.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCredentials.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgCredentials.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCredentials.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCredID,
@@ -1732,105 +1831,6 @@
             this.colCredPassword.Name = "colCredPassword";
             this.colCredPassword.ReadOnly = true;
             // 
-            // tabOptions
-            // 
-            this.tabOptions.Controls.Add(this.btnRestartAPI);
-            this.tabOptions.Controls.Add(this.btnShutDown);
-            this.tabOptions.Controls.Add(this.btnRTJ);
-            this.tabOptions.Controls.Add(this.btnChangePolling);
-            this.tabOptions.Controls.Add(this.btnRefreshAll);
-            this.tabOptions.Controls.Add(this.btnChangeAPIToken);
-            this.tabOptions.Controls.Add(this.btnGetEmpireGUIVersion);
-            this.tabOptions.Controls.Add(this.btnExit);
-            this.tabOptions.HorizontalScrollbarBarColor = true;
-            this.tabOptions.Location = new System.Drawing.Point(4, 35);
-            this.tabOptions.Name = "tabOptions";
-            this.tabOptions.Size = new System.Drawing.Size(1131, 631);
-            this.tabOptions.TabIndex = 5;
-            this.tabOptions.Text = "EmpireGUI Options";
-            this.tabOptions.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tabOptions.VerticalScrollbarBarColor = true;
-            // 
-            // btnRestartAPI
-            // 
-            this.btnRestartAPI.Location = new System.Drawing.Point(3, 384);
-            this.btnRestartAPI.Name = "btnRestartAPI";
-            this.btnRestartAPI.Size = new System.Drawing.Size(148, 48);
-            this.btnRestartAPI.TabIndex = 9;
-            this.btnRestartAPI.Text = "Restart API";
-            this.btnRestartAPI.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnRestartAPI.Click += new System.EventHandler(this.btnRestartAPI_Click);
-            // 
-            // btnShutDown
-            // 
-            this.btnShutDown.Location = new System.Drawing.Point(3, 330);
-            this.btnShutDown.Name = "btnShutDown";
-            this.btnShutDown.Size = new System.Drawing.Size(148, 48);
-            this.btnShutDown.TabIndex = 8;
-            this.btnShutDown.Text = "Shutdown REST API";
-            this.btnShutDown.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnShutDown.Click += new System.EventHandler(this.btnShutDown_Click);
-            // 
-            // btnRTJ
-            // 
-            this.btnRTJ.Location = new System.Drawing.Point(3, 276);
-            this.btnRTJ.Name = "btnRTJ";
-            this.btnRTJ.Size = new System.Drawing.Size(148, 48);
-            this.btnRTJ.TabIndex = 7;
-            this.btnRTJ.Text = "Run the Jewels";
-            this.btnRTJ.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnRTJ.Click += new System.EventHandler(this.metroButton5_Click);
-            // 
-            // btnChangePolling
-            // 
-            this.btnChangePolling.Location = new System.Drawing.Point(3, 222);
-            this.btnChangePolling.Name = "btnChangePolling";
-            this.btnChangePolling.Size = new System.Drawing.Size(148, 48);
-            this.btnChangePolling.TabIndex = 6;
-            this.btnChangePolling.Text = "Change Polling Value";
-            this.btnChangePolling.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnChangePolling.Click += new System.EventHandler(this.btnChangePolling_Click);
-            // 
-            // btnRefreshAll
-            // 
-            this.btnRefreshAll.Location = new System.Drawing.Point(3, 168);
-            this.btnRefreshAll.Name = "btnRefreshAll";
-            this.btnRefreshAll.Size = new System.Drawing.Size(148, 48);
-            this.btnRefreshAll.TabIndex = 5;
-            this.btnRefreshAll.Text = "Refresh All Data";
-            this.btnRefreshAll.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnRefreshAll.Click += new System.EventHandler(this.btnRefreshAll_Click);
-            // 
-            // btnChangeAPIToken
-            // 
-            this.btnChangeAPIToken.Location = new System.Drawing.Point(3, 114);
-            this.btnChangeAPIToken.Name = "btnChangeAPIToken";
-            this.btnChangeAPIToken.Size = new System.Drawing.Size(148, 48);
-            this.btnChangeAPIToken.TabIndex = 4;
-            this.btnChangeAPIToken.Text = "Change API Token";
-            this.btnChangeAPIToken.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnChangeAPIToken.Click += new System.EventHandler(this.btnChangeAPIToken_Click);
-            // 
-            // btnGetEmpireGUIVersion
-            // 
-            this.btnGetEmpireGUIVersion.Location = new System.Drawing.Point(3, 6);
-            this.btnGetEmpireGUIVersion.Name = "btnGetEmpireGUIVersion";
-            this.btnGetEmpireGUIVersion.Size = new System.Drawing.Size(148, 48);
-            this.btnGetEmpireGUIVersion.TabIndex = 3;
-            this.btnGetEmpireGUIVersion.Text = "Get EmpireGUI Version";
-            this.btnGetEmpireGUIVersion.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnGetEmpireGUIVersion.Click += new System.EventHandler(this.btnGetEmpireGUIVersion_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(3, 60);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(148, 48);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit Empire GUI";
-            this.btnExit.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1843,6 +1843,7 @@
             this.metroTabControl1.ResumeLayout(false);
             this.tabActiveAgents.ResumeLayout(false);
             this.tabActiveAgents.PerformLayout();
+            this.tabOptions.ResumeLayout(false);
             this.tabModules.ResumeLayout(false);
             this.tabModules.PerformLayout();
             this.tabListeners.ResumeLayout(false);
@@ -1854,7 +1855,6 @@
             this.tabCredentials.ResumeLayout(false);
             this.tabCredentials.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCredentials)).EndInit();
-            this.tabOptions.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

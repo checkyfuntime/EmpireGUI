@@ -156,13 +156,7 @@
     <Resource Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\empire_logo_black4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\darth-vader-minimalist-keshava-shukla.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\darth-vader-darth-vader-minimalism.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
