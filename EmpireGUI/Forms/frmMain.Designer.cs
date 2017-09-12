@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabActiveAgents = new MetroFramework.Controls.MetroTabPage();
             this.btnKillAgent = new MetroFramework.Controls.MetroButton();
@@ -97,6 +97,29 @@
             this.btnChangeAPIToken = new MetroFramework.Controls.MetroButton();
             this.btnGetEmpireGUIVersion = new MetroFramework.Controls.MetroButton();
             this.btnExit = new MetroFramework.Controls.MetroButton();
+            this.tabListeners = new MetroFramework.Controls.MetroTabPage();
+            this.cmbListenerSelect = new MetroFramework.Controls.MetroComboBox();
+            this.ctrlListeners = new MetroFramework.Controls.MetroPanel();
+            this.lblModuleType = new MetroFramework.Controls.MetroLabel();
+            this.lblListID = new MetroFramework.Controls.MetroLabel();
+            this.lblListenerCategory = new MetroFramework.Controls.MetroLabel();
+            this.lblListenerID = new MetroFramework.Controls.MetroLabel();
+            this.lblListCat = new MetroFramework.Controls.MetroLabel();
+            this.lblModType = new MetroFramework.Controls.MetroLabel();
+            this.txtListID = new MetroFramework.Controls.MetroTextBox();
+            this.txtListCatVal = new MetroFramework.Controls.MetroTextBox();
+            this.txtModTypeValue = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
+            this.btnkillAllListeners = new MetroFramework.Controls.MetroButton();
+            this.btnDeleteListener = new MetroFramework.Controls.MetroButton();
+            this.metroLabel41 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel39 = new MetroFramework.Controls.MetroLabel();
+            this.btnClearListenerOptions = new MetroFramework.Controls.MetroButton();
+            this.btnNewListener = new MetroFramework.Controls.MetroButton();
+            this.lstListeners = new System.Windows.Forms.ListBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.tabModules = new MetroFramework.Controls.MetroTabPage();
             this.pnlModuleOptions = new MetroFramework.Controls.MetroPanel();
             this.btnSearchModules = new MetroFramework.Controls.MetroButton();
@@ -126,38 +149,6 @@
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.btnRunModule = new MetroFramework.Controls.MetroButton();
             this.treeModules = new System.Windows.Forms.TreeView();
-            this.tabListeners = new MetroFramework.Controls.MetroTabPage();
-            this.cmbListenerSelect = new MetroFramework.Controls.MetroComboBox();
-            this.ctrlListeners = new MetroFramework.Controls.MetroPanel();
-            this.lblModuleType = new MetroFramework.Controls.MetroLabel();
-            this.lblListID = new MetroFramework.Controls.MetroLabel();
-            this.lblListenerCategory = new MetroFramework.Controls.MetroLabel();
-            this.lblListenerID = new MetroFramework.Controls.MetroLabel();
-            this.lblListCat = new MetroFramework.Controls.MetroLabel();
-            this.lblModType = new MetroFramework.Controls.MetroLabel();
-            this.txtListID = new MetroFramework.Controls.MetroTextBox();
-            this.txtListCatVal = new MetroFramework.Controls.MetroTextBox();
-            this.txtModTypeValue = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
-            this.btnkillAllListeners = new MetroFramework.Controls.MetroButton();
-            this.btnDeleteListener = new MetroFramework.Controls.MetroButton();
-            this.metroLabel41 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel39 = new MetroFramework.Controls.MetroLabel();
-            this.btnClearListenerOptions = new MetroFramework.Controls.MetroButton();
-            this.btnNewListener = new MetroFramework.Controls.MetroButton();
-            this.lstListeners = new System.Windows.Forms.ListBox();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.tabGenerateStager = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
-            this.lblAPIToken1 = new MetroFramework.Controls.MetroLabel();
-            this.btnCreateNewListener = new MetroFramework.Controls.MetroButton();
-            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
-            this.lstStagers = new System.Windows.Forms.ListBox();
-            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
-            this.btnClearOptions = new MetroFramework.Controls.MetroButton();
-            this.btnGenerateStager = new MetroFramework.Controls.MetroButton();
             this.tabCredentials = new MetroFramework.Controls.MetroTabPage();
             this.lblAPIToken3 = new MetroFramework.Controls.MetroLabel();
             this.btnSyncCredentials = new MetroFramework.Controls.MetroButton();
@@ -174,28 +165,37 @@
             this.colCredUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCredHost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCredPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabGenerateStager = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
+            this.lblAPIToken1 = new MetroFramework.Controls.MetroLabel();
+            this.btnCreateNewListener = new MetroFramework.Controls.MetroButton();
+            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
+            this.lstStagers = new System.Windows.Forms.ListBox();
+            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
+            this.btnClearOptions = new MetroFramework.Controls.MetroButton();
+            this.btnGenerateStager = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
             this.tabActiveAgents.SuspendLayout();
             this.tabOptions.SuspendLayout();
-            this.tabModules.SuspendLayout();
             this.tabListeners.SuspendLayout();
             this.ctrlListeners.SuspendLayout();
-            this.tabGenerateStager.SuspendLayout();
+            this.tabModules.SuspendLayout();
             this.tabCredentials.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCredentials)).BeginInit();
+            this.tabGenerateStager.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.tabActiveAgents);
+            this.metroTabControl1.Controls.Add(this.tabOptions);
             this.metroTabControl1.Controls.Add(this.tabListeners);
             this.metroTabControl1.Controls.Add(this.tabModules);
             this.metroTabControl1.Controls.Add(this.tabCredentials);
             this.metroTabControl1.Controls.Add(this.tabGenerateStager);
-            this.metroTabControl1.Controls.Add(this.tabOptions);
             this.metroTabControl1.Location = new System.Drawing.Point(2, 6);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 5;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(1139, 670);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -618,14 +618,15 @@
             // 
             // lstAgents
             // 
-            this.lstAgents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lstAgents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.lstAgents.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstAgents.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstAgents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lstAgents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
             this.lstAgents.FormattingEnabled = true;
             this.lstAgents.ItemHeight = 15;
             this.lstAgents.Location = new System.Drawing.Point(17, 45);
             this.lstAgents.Name = "lstAgents";
-            this.lstAgents.Size = new System.Drawing.Size(224, 574);
+            this.lstAgents.Size = new System.Drawing.Size(224, 570);
             this.lstAgents.TabIndex = 24;
             this.lstAgents.SelectedIndexChanged += new System.EventHandler(this.lstAgents_SelectedIndexChanged);
             // 
@@ -817,6 +818,7 @@
             // 
             // tabOptions
             // 
+            this.tabOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.tabOptions.Controls.Add(this.btnRestartAPI);
             this.tabOptions.Controls.Add(this.btnShutDown);
             this.tabOptions.Controls.Add(this.btnRTJ);
@@ -914,8 +916,291 @@
             this.btnExit.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // tabListeners
+            // 
+            this.tabListeners.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.tabListeners.Controls.Add(this.cmbListenerSelect);
+            this.tabListeners.Controls.Add(this.ctrlListeners);
+            this.tabListeners.Controls.Add(this.metroLabel26);
+            this.tabListeners.Controls.Add(this.btnkillAllListeners);
+            this.tabListeners.Controls.Add(this.btnDeleteListener);
+            this.tabListeners.Controls.Add(this.metroLabel41);
+            this.tabListeners.Controls.Add(this.metroLabel40);
+            this.tabListeners.Controls.Add(this.metroLabel39);
+            this.tabListeners.Controls.Add(this.btnClearListenerOptions);
+            this.tabListeners.Controls.Add(this.btnNewListener);
+            this.tabListeners.Controls.Add(this.lstListeners);
+            this.tabListeners.Controls.Add(this.metroLabel10);
+            this.tabListeners.Controls.Add(this.metroLabel9);
+            this.tabListeners.HorizontalScrollbarBarColor = true;
+            this.tabListeners.Location = new System.Drawing.Point(4, 35);
+            this.tabListeners.Name = "tabListeners";
+            this.tabListeners.Size = new System.Drawing.Size(1131, 631);
+            this.tabListeners.TabIndex = 0;
+            this.tabListeners.Text = "Listeners";
+            this.tabListeners.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabListeners.VerticalScrollbarBarColor = true;
+            // 
+            // cmbListenerSelect
+            // 
+            this.cmbListenerSelect.FormattingEnabled = true;
+            this.cmbListenerSelect.ItemHeight = 23;
+            this.cmbListenerSelect.Location = new System.Drawing.Point(17, 47);
+            this.cmbListenerSelect.MaxDropDownItems = 99;
+            this.cmbListenerSelect.Name = "cmbListenerSelect";
+            this.cmbListenerSelect.Size = new System.Drawing.Size(224, 29);
+            this.cmbListenerSelect.TabIndex = 101;
+            this.cmbListenerSelect.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cmbListenerSelect.SelectedIndexChanged += new System.EventHandler(this.cmbListenerSelect_SelectedIndexChanged);
+            // 
+            // ctrlListeners
+            // 
+            this.ctrlListeners.AutoScroll = true;
+            this.ctrlListeners.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.ctrlListeners.Controls.Add(this.lblModuleType);
+            this.ctrlListeners.Controls.Add(this.lblListID);
+            this.ctrlListeners.Controls.Add(this.lblListenerCategory);
+            this.ctrlListeners.Controls.Add(this.lblListenerID);
+            this.ctrlListeners.Controls.Add(this.lblListCat);
+            this.ctrlListeners.Controls.Add(this.lblModType);
+            this.ctrlListeners.Controls.Add(this.txtListID);
+            this.ctrlListeners.Controls.Add(this.txtListCatVal);
+            this.ctrlListeners.Controls.Add(this.txtModTypeValue);
+            this.ctrlListeners.HorizontalScrollbar = true;
+            this.ctrlListeners.HorizontalScrollbarBarColor = true;
+            this.ctrlListeners.HorizontalScrollbarHighlightOnWheel = false;
+            this.ctrlListeners.HorizontalScrollbarSize = 10;
+            this.ctrlListeners.Location = new System.Drawing.Point(247, 37);
+            this.ctrlListeners.Name = "ctrlListeners";
+            this.ctrlListeners.Size = new System.Drawing.Size(656, 572);
+            this.ctrlListeners.TabIndex = 100;
+            this.ctrlListeners.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.ctrlListeners.VerticalScrollbar = true;
+            this.ctrlListeners.VerticalScrollbarBarColor = true;
+            this.ctrlListeners.VerticalScrollbarHighlightOnWheel = false;
+            this.ctrlListeners.VerticalScrollbarSize = 10;
+            // 
+            // lblModuleType
+            // 
+            this.lblModuleType.AutoSize = true;
+            this.lblModuleType.Location = new System.Drawing.Point(155, 67);
+            this.lblModuleType.Name = "lblModuleType";
+            this.lblModuleType.Size = new System.Drawing.Size(201, 19);
+            this.lblModuleType.TabIndex = 99;
+            this.lblModuleType.Text = "The Module used for the Listener";
+            this.lblModuleType.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblListID
+            // 
+            this.lblListID.AutoSize = true;
+            this.lblListID.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblListID.Location = new System.Drawing.Point(3, 9);
+            this.lblListID.Name = "lblListID";
+            this.lblListID.Size = new System.Drawing.Size(79, 19);
+            this.lblListID.TabIndex = 93;
+            this.lblListID.Tag = "AlwaysShow";
+            this.lblListID.Text = "Listener ID";
+            this.lblListID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblListenerCategory
+            // 
+            this.lblListenerCategory.AutoSize = true;
+            this.lblListenerCategory.Location = new System.Drawing.Point(155, 38);
+            this.lblListenerCategory.Name = "lblListenerCategory";
+            this.lblListenerCategory.Size = new System.Drawing.Size(175, 19);
+            this.lblListenerCategory.TabIndex = 97;
+            this.lblListenerCategory.Text = "The Category of the Listener";
+            this.lblListenerCategory.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblListenerID
+            // 
+            this.lblListenerID.AutoSize = true;
+            this.lblListenerID.Location = new System.Drawing.Point(153, 9);
+            this.lblListenerID.Name = "lblListenerID";
+            this.lblListenerID.Size = new System.Drawing.Size(207, 19);
+            this.lblListenerID.TabIndex = 95;
+            this.lblListenerID.Text = "The ID associated with the Listener";
+            this.lblListenerID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblListCat
+            // 
+            this.lblListCat.AutoSize = true;
+            this.lblListCat.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblListCat.Location = new System.Drawing.Point(3, 38);
+            this.lblListCat.Name = "lblListCat";
+            this.lblListCat.Size = new System.Drawing.Size(128, 19);
+            this.lblListCat.TabIndex = 27;
+            this.lblListCat.Tag = "AlwaysShow";
+            this.lblListCat.Text = "Listener Category";
+            this.lblListCat.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblModType
+            // 
+            this.lblModType.AutoSize = true;
+            this.lblModType.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblModType.Location = new System.Drawing.Point(3, 66);
+            this.lblModType.Name = "lblModType";
+            this.lblModType.Size = new System.Drawing.Size(96, 19);
+            this.lblModType.TabIndex = 43;
+            this.lblModType.Tag = "AlwaysShow";
+            this.lblModType.Text = "Module Type";
+            this.lblModType.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtListID
+            // 
+            this.txtListID.Location = new System.Drawing.Point(471, 9);
+            this.txtListID.Name = "txtListID";
+            this.txtListID.Size = new System.Drawing.Size(182, 23);
+            this.txtListID.TabIndex = 94;
+            this.txtListID.Tag = "NoSend";
+            this.txtListID.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtListCatVal
+            // 
+            this.txtListCatVal.Location = new System.Drawing.Point(471, 38);
+            this.txtListCatVal.Name = "txtListCatVal";
+            this.txtListCatVal.Size = new System.Drawing.Size(182, 23);
+            this.txtListCatVal.TabIndex = 46;
+            this.txtListCatVal.Tag = "NoSend";
+            this.txtListCatVal.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtModTypeValue
+            // 
+            this.txtModTypeValue.Location = new System.Drawing.Point(471, 67);
+            this.txtModTypeValue.Name = "txtModTypeValue";
+            this.txtModTypeValue.Size = new System.Drawing.Size(182, 23);
+            this.txtModTypeValue.TabIndex = 48;
+            this.txtModTypeValue.Tag = "NoSend";
+            this.txtModTypeValue.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel26
+            // 
+            this.metroLabel26.AutoSize = true;
+            this.metroLabel26.Location = new System.Drawing.Point(1034, 612);
+            this.metroLabel26.Name = "metroLabel26";
+            this.metroLabel26.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel26.TabIndex = 80;
+            this.metroLabel26.Text = "API Token";
+            this.metroLabel26.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btnkillAllListeners
+            // 
+            this.btnkillAllListeners.Location = new System.Drawing.Point(909, 464);
+            this.btnkillAllListeners.Name = "btnkillAllListeners";
+            this.btnkillAllListeners.Size = new System.Drawing.Size(209, 145);
+            this.btnkillAllListeners.TabIndex = 79;
+            this.btnkillAllListeners.Text = "Kill All Listeners";
+            this.btnkillAllListeners.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnkillAllListeners.Click += new System.EventHandler(this.btnkillAllListeners_Click);
+            // 
+            // btnDeleteListener
+            // 
+            this.btnDeleteListener.Location = new System.Drawing.Point(909, 313);
+            this.btnDeleteListener.Name = "btnDeleteListener";
+            this.btnDeleteListener.Size = new System.Drawing.Size(209, 145);
+            this.btnDeleteListener.TabIndex = 78;
+            this.btnDeleteListener.Text = "Delete Listener";
+            this.btnDeleteListener.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnDeleteListener.Click += new System.EventHandler(this.btnDeleteListener_Click);
+            // 
+            // metroLabel41
+            // 
+            this.metroLabel41.AutoSize = true;
+            this.metroLabel41.Location = new System.Drawing.Point(712, 14);
+            this.metroLabel41.Name = "metroLabel41";
+            this.metroLabel41.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel41.TabIndex = 77;
+            this.metroLabel41.Tag = "AlwaysShow";
+            this.metroLabel41.Text = "Value";
+            this.metroLabel41.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel40
+            // 
+            this.metroLabel40.AutoSize = true;
+            this.metroLabel40.Location = new System.Drawing.Point(397, 14);
+            this.metroLabel40.Name = "metroLabel40";
+            this.metroLabel40.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel40.TabIndex = 76;
+            this.metroLabel40.Tag = "AlwaysShow";
+            this.metroLabel40.Text = "Description";
+            this.metroLabel40.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel39
+            // 
+            this.metroLabel39.AutoSize = true;
+            this.metroLabel39.Location = new System.Drawing.Point(264, 14);
+            this.metroLabel39.Name = "metroLabel39";
+            this.metroLabel39.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel39.TabIndex = 75;
+            this.metroLabel39.Tag = "AlwaysShow";
+            this.metroLabel39.Text = "Option";
+            this.metroLabel39.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btnClearListenerOptions
+            // 
+            this.btnClearListenerOptions.Location = new System.Drawing.Point(909, 162);
+            this.btnClearListenerOptions.Name = "btnClearListenerOptions";
+            this.btnClearListenerOptions.Size = new System.Drawing.Size(209, 145);
+            this.btnClearListenerOptions.TabIndex = 31;
+            this.btnClearListenerOptions.Text = "Clear Options";
+            this.btnClearListenerOptions.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearListenerOptions.Click += new System.EventHandler(this.btnClearListenerOptions_Click);
+            // 
+            // btnNewListener
+            // 
+            this.btnNewListener.Location = new System.Drawing.Point(909, 11);
+            this.btnNewListener.Name = "btnNewListener";
+            this.btnNewListener.Size = new System.Drawing.Size(209, 145);
+            this.btnNewListener.TabIndex = 30;
+            this.btnNewListener.Text = "Add New Listener";
+            this.btnNewListener.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnNewListener.Click += new System.EventHandler(this.btnNewListener_Click);
+            // 
+            // lstListeners
+            // 
+            this.lstListeners.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.lstListeners.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstListeners.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstListeners.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
+            this.lstListeners.FormattingEnabled = true;
+            this.lstListeners.ItemHeight = 15;
+            this.lstListeners.Items.AddRange(new object[] {
+            "Listener1",
+            "Listener2",
+            "Listener3"});
+            this.lstListeners.Location = new System.Drawing.Point(17, 127);
+            this.lstListeners.Name = "lstListeners";
+            this.lstListeners.Size = new System.Drawing.Size(224, 480);
+            this.lstListeners.TabIndex = 25;
+            this.lstListeners.SelectedIndexChanged += new System.EventHandler(this.lstListeners_SelectedIndexChanged);
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel10.Location = new System.Drawing.Point(34, 98);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(168, 25);
+            this.metroLabel10.TabIndex = 5;
+            this.metroLabel10.Tag = "AlwaysShow";
+            this.metroLabel10.Text = "View Active Listeners";
+            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel9.Location = new System.Drawing.Point(39, 19);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(163, 25);
+            this.metroLabel9.TabIndex = 102;
+            this.metroLabel9.Text = "Create New Listener";
+            this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // tabModules
             // 
+            this.tabModules.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.tabModules.Controls.Add(this.pnlModuleOptions);
             this.tabModules.Controls.Add(this.btnSearchModules);
             this.tabModules.Controls.Add(this.lblAPIToken2);
@@ -1260,6 +1545,7 @@
             // treeModules
             // 
             this.treeModules.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.treeModules.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeModules.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeModules.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
             this.treeModules.HideSelection = false;
@@ -1269,392 +1555,9 @@
             this.treeModules.TabIndex = 2;
             this.treeModules.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeModules_AfterSelect);
             // 
-            // tabListeners
-            // 
-            this.tabListeners.Controls.Add(this.cmbListenerSelect);
-            this.tabListeners.Controls.Add(this.ctrlListeners);
-            this.tabListeners.Controls.Add(this.metroLabel26);
-            this.tabListeners.Controls.Add(this.btnkillAllListeners);
-            this.tabListeners.Controls.Add(this.btnDeleteListener);
-            this.tabListeners.Controls.Add(this.metroLabel41);
-            this.tabListeners.Controls.Add(this.metroLabel40);
-            this.tabListeners.Controls.Add(this.metroLabel39);
-            this.tabListeners.Controls.Add(this.btnClearListenerOptions);
-            this.tabListeners.Controls.Add(this.btnNewListener);
-            this.tabListeners.Controls.Add(this.lstListeners);
-            this.tabListeners.Controls.Add(this.metroLabel10);
-            this.tabListeners.Controls.Add(this.metroLabel9);
-            this.tabListeners.HorizontalScrollbarBarColor = true;
-            this.tabListeners.Location = new System.Drawing.Point(4, 35);
-            this.tabListeners.Name = "tabListeners";
-            this.tabListeners.Size = new System.Drawing.Size(1131, 631);
-            this.tabListeners.TabIndex = 0;
-            this.tabListeners.Text = "Listeners";
-            this.tabListeners.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tabListeners.VerticalScrollbarBarColor = true;
-            // 
-            // cmbListenerSelect
-            // 
-            this.cmbListenerSelect.FormattingEnabled = true;
-            this.cmbListenerSelect.ItemHeight = 23;
-            this.cmbListenerSelect.Location = new System.Drawing.Point(17, 47);
-            this.cmbListenerSelect.Name = "cmbListenerSelect";
-            this.cmbListenerSelect.Size = new System.Drawing.Size(224, 29);
-            this.cmbListenerSelect.TabIndex = 101;
-            this.cmbListenerSelect.SelectedIndexChanged += new System.EventHandler(this.cmbListenerSelect_SelectedIndexChanged);
-            // 
-            // ctrlListeners
-            // 
-            this.ctrlListeners.AutoScroll = true;
-            this.ctrlListeners.Controls.Add(this.lblModuleType);
-            this.ctrlListeners.Controls.Add(this.lblListID);
-            this.ctrlListeners.Controls.Add(this.lblListenerCategory);
-            this.ctrlListeners.Controls.Add(this.lblListenerID);
-            this.ctrlListeners.Controls.Add(this.lblListCat);
-            this.ctrlListeners.Controls.Add(this.lblModType);
-            this.ctrlListeners.Controls.Add(this.txtListID);
-            this.ctrlListeners.Controls.Add(this.txtListCatVal);
-            this.ctrlListeners.Controls.Add(this.txtModTypeValue);
-            this.ctrlListeners.HorizontalScrollbar = true;
-            this.ctrlListeners.HorizontalScrollbarBarColor = true;
-            this.ctrlListeners.HorizontalScrollbarHighlightOnWheel = false;
-            this.ctrlListeners.HorizontalScrollbarSize = 10;
-            this.ctrlListeners.Location = new System.Drawing.Point(247, 37);
-            this.ctrlListeners.Name = "ctrlListeners";
-            this.ctrlListeners.Size = new System.Drawing.Size(656, 572);
-            this.ctrlListeners.TabIndex = 100;
-            this.ctrlListeners.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.ctrlListeners.VerticalScrollbar = true;
-            this.ctrlListeners.VerticalScrollbarBarColor = true;
-            this.ctrlListeners.VerticalScrollbarHighlightOnWheel = false;
-            this.ctrlListeners.VerticalScrollbarSize = 10;
-            // 
-            // lblModuleType
-            // 
-            this.lblModuleType.AutoSize = true;
-            this.lblModuleType.Location = new System.Drawing.Point(155, 67);
-            this.lblModuleType.Name = "lblModuleType";
-            this.lblModuleType.Size = new System.Drawing.Size(201, 19);
-            this.lblModuleType.TabIndex = 99;
-            this.lblModuleType.Text = "The Module used for the Listener";
-            this.lblModuleType.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lblListID
-            // 
-            this.lblListID.AutoSize = true;
-            this.lblListID.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblListID.Location = new System.Drawing.Point(3, 9);
-            this.lblListID.Name = "lblListID";
-            this.lblListID.Size = new System.Drawing.Size(79, 19);
-            this.lblListID.TabIndex = 93;
-            this.lblListID.Tag = "AlwaysShow";
-            this.lblListID.Text = "Listener ID";
-            this.lblListID.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lblListenerCategory
-            // 
-            this.lblListenerCategory.AutoSize = true;
-            this.lblListenerCategory.Location = new System.Drawing.Point(155, 38);
-            this.lblListenerCategory.Name = "lblListenerCategory";
-            this.lblListenerCategory.Size = new System.Drawing.Size(175, 19);
-            this.lblListenerCategory.TabIndex = 97;
-            this.lblListenerCategory.Text = "The Category of the Listener";
-            this.lblListenerCategory.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lblListenerID
-            // 
-            this.lblListenerID.AutoSize = true;
-            this.lblListenerID.Location = new System.Drawing.Point(153, 9);
-            this.lblListenerID.Name = "lblListenerID";
-            this.lblListenerID.Size = new System.Drawing.Size(207, 19);
-            this.lblListenerID.TabIndex = 95;
-            this.lblListenerID.Text = "The ID associated with the Listener";
-            this.lblListenerID.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lblListCat
-            // 
-            this.lblListCat.AutoSize = true;
-            this.lblListCat.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblListCat.Location = new System.Drawing.Point(3, 38);
-            this.lblListCat.Name = "lblListCat";
-            this.lblListCat.Size = new System.Drawing.Size(128, 19);
-            this.lblListCat.TabIndex = 27;
-            this.lblListCat.Tag = "AlwaysShow";
-            this.lblListCat.Text = "Listener Category";
-            this.lblListCat.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lblModType
-            // 
-            this.lblModType.AutoSize = true;
-            this.lblModType.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblModType.Location = new System.Drawing.Point(3, 66);
-            this.lblModType.Name = "lblModType";
-            this.lblModType.Size = new System.Drawing.Size(96, 19);
-            this.lblModType.TabIndex = 43;
-            this.lblModType.Tag = "AlwaysShow";
-            this.lblModType.Text = "Module Type";
-            this.lblModType.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtListID
-            // 
-            this.txtListID.Location = new System.Drawing.Point(471, 9);
-            this.txtListID.Name = "txtListID";
-            this.txtListID.Size = new System.Drawing.Size(182, 23);
-            this.txtListID.TabIndex = 94;
-            this.txtListID.Tag = "NoSend";
-            this.txtListID.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtListCatVal
-            // 
-            this.txtListCatVal.Location = new System.Drawing.Point(471, 38);
-            this.txtListCatVal.Name = "txtListCatVal";
-            this.txtListCatVal.Size = new System.Drawing.Size(182, 23);
-            this.txtListCatVal.TabIndex = 46;
-            this.txtListCatVal.Tag = "NoSend";
-            this.txtListCatVal.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtModTypeValue
-            // 
-            this.txtModTypeValue.Location = new System.Drawing.Point(471, 67);
-            this.txtModTypeValue.Name = "txtModTypeValue";
-            this.txtModTypeValue.Size = new System.Drawing.Size(182, 23);
-            this.txtModTypeValue.TabIndex = 48;
-            this.txtModTypeValue.Tag = "NoSend";
-            this.txtModTypeValue.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel26
-            // 
-            this.metroLabel26.AutoSize = true;
-            this.metroLabel26.Location = new System.Drawing.Point(1034, 612);
-            this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel26.TabIndex = 80;
-            this.metroLabel26.Text = "API Token";
-            this.metroLabel26.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnkillAllListeners
-            // 
-            this.btnkillAllListeners.Location = new System.Drawing.Point(909, 464);
-            this.btnkillAllListeners.Name = "btnkillAllListeners";
-            this.btnkillAllListeners.Size = new System.Drawing.Size(209, 145);
-            this.btnkillAllListeners.TabIndex = 79;
-            this.btnkillAllListeners.Text = "Kill All Listeners";
-            this.btnkillAllListeners.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnkillAllListeners.Click += new System.EventHandler(this.btnkillAllListeners_Click);
-            // 
-            // btnDeleteListener
-            // 
-            this.btnDeleteListener.Location = new System.Drawing.Point(909, 313);
-            this.btnDeleteListener.Name = "btnDeleteListener";
-            this.btnDeleteListener.Size = new System.Drawing.Size(209, 145);
-            this.btnDeleteListener.TabIndex = 78;
-            this.btnDeleteListener.Text = "Delete Listener";
-            this.btnDeleteListener.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnDeleteListener.Click += new System.EventHandler(this.btnDeleteListener_Click);
-            // 
-            // metroLabel41
-            // 
-            this.metroLabel41.AutoSize = true;
-            this.metroLabel41.Location = new System.Drawing.Point(712, 14);
-            this.metroLabel41.Name = "metroLabel41";
-            this.metroLabel41.Size = new System.Drawing.Size(39, 19);
-            this.metroLabel41.TabIndex = 77;
-            this.metroLabel41.Tag = "AlwaysShow";
-            this.metroLabel41.Text = "Value";
-            this.metroLabel41.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel40
-            // 
-            this.metroLabel40.AutoSize = true;
-            this.metroLabel40.Location = new System.Drawing.Point(397, 14);
-            this.metroLabel40.Name = "metroLabel40";
-            this.metroLabel40.Size = new System.Drawing.Size(74, 19);
-            this.metroLabel40.TabIndex = 76;
-            this.metroLabel40.Tag = "AlwaysShow";
-            this.metroLabel40.Text = "Description";
-            this.metroLabel40.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel39
-            // 
-            this.metroLabel39.AutoSize = true;
-            this.metroLabel39.Location = new System.Drawing.Point(264, 14);
-            this.metroLabel39.Name = "metroLabel39";
-            this.metroLabel39.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel39.TabIndex = 75;
-            this.metroLabel39.Tag = "AlwaysShow";
-            this.metroLabel39.Text = "Option";
-            this.metroLabel39.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnClearListenerOptions
-            // 
-            this.btnClearListenerOptions.Location = new System.Drawing.Point(909, 162);
-            this.btnClearListenerOptions.Name = "btnClearListenerOptions";
-            this.btnClearListenerOptions.Size = new System.Drawing.Size(209, 145);
-            this.btnClearListenerOptions.TabIndex = 31;
-            this.btnClearListenerOptions.Text = "Clear Options";
-            this.btnClearListenerOptions.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnClearListenerOptions.Click += new System.EventHandler(this.btnClearListenerOptions_Click);
-            // 
-            // btnNewListener
-            // 
-            this.btnNewListener.Location = new System.Drawing.Point(909, 11);
-            this.btnNewListener.Name = "btnNewListener";
-            this.btnNewListener.Size = new System.Drawing.Size(209, 145);
-            this.btnNewListener.TabIndex = 30;
-            this.btnNewListener.Text = "Add New Listener";
-            this.btnNewListener.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnNewListener.Click += new System.EventHandler(this.btnNewListener_Click);
-            // 
-            // lstListeners
-            // 
-            this.lstListeners.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lstListeners.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstListeners.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lstListeners.FormattingEnabled = true;
-            this.lstListeners.ItemHeight = 15;
-            this.lstListeners.Items.AddRange(new object[] {
-            "Listener1",
-            "Listener2",
-            "Listener3"});
-            this.lstListeners.Location = new System.Drawing.Point(17, 127);
-            this.lstListeners.Name = "lstListeners";
-            this.lstListeners.Size = new System.Drawing.Size(224, 484);
-            this.lstListeners.TabIndex = 25;
-            this.lstListeners.SelectedIndexChanged += new System.EventHandler(this.lstListeners_SelectedIndexChanged);
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel10.Location = new System.Drawing.Point(34, 98);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(168, 25);
-            this.metroLabel10.TabIndex = 5;
-            this.metroLabel10.Tag = "AlwaysShow";
-            this.metroLabel10.Text = "View Active Listeners";
-            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel9.Location = new System.Drawing.Point(39, 19);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(163, 25);
-            this.metroLabel9.TabIndex = 102;
-            this.metroLabel9.Text = "Create New Listener";
-            this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // tabGenerateStager
-            // 
-            this.tabGenerateStager.Controls.Add(this.metroLabel27);
-            this.tabGenerateStager.Controls.Add(this.lblAPIToken1);
-            this.tabGenerateStager.Controls.Add(this.btnCreateNewListener);
-            this.tabGenerateStager.Controls.Add(this.metroLabel25);
-            this.tabGenerateStager.Controls.Add(this.lstStagers);
-            this.tabGenerateStager.Controls.Add(this.metroLabel22);
-            this.tabGenerateStager.Controls.Add(this.btnClearOptions);
-            this.tabGenerateStager.Controls.Add(this.btnGenerateStager);
-            this.tabGenerateStager.HorizontalScrollbarBarColor = true;
-            this.tabGenerateStager.Location = new System.Drawing.Point(4, 35);
-            this.tabGenerateStager.Name = "tabGenerateStager";
-            this.tabGenerateStager.Size = new System.Drawing.Size(1131, 631);
-            this.tabGenerateStager.TabIndex = 2;
-            this.tabGenerateStager.Text = "Generate Stager";
-            this.tabGenerateStager.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tabGenerateStager.VerticalScrollbarBarColor = true;
-            // 
-            // metroLabel27
-            // 
-            this.metroLabel27.AutoSize = true;
-            this.metroLabel27.Location = new System.Drawing.Point(944, 19);
-            this.metroLabel27.Name = "metroLabel27";
-            this.metroLabel27.Size = new System.Drawing.Size(156, 95);
-            this.metroLabel27.TabIndex = 31;
-            this.metroLabel27.Text = "To Do:\r\nBack Color - 34,34,34\r\nFore Color - 172, 179, 181\r\n\r\n(On listboxes)";
-            this.metroLabel27.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lblAPIToken1
-            // 
-            this.lblAPIToken1.AutoSize = true;
-            this.lblAPIToken1.Location = new System.Drawing.Point(1034, 612);
-            this.lblAPIToken1.Name = "lblAPIToken1";
-            this.lblAPIToken1.Size = new System.Drawing.Size(66, 19);
-            this.lblAPIToken1.TabIndex = 30;
-            this.lblAPIToken1.Text = "API Token";
-            this.lblAPIToken1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnCreateNewListener
-            // 
-            this.btnCreateNewListener.Location = new System.Drawing.Point(956, 425);
-            this.btnCreateNewListener.Name = "btnCreateNewListener";
-            this.btnCreateNewListener.Size = new System.Drawing.Size(153, 106);
-            this.btnCreateNewListener.TabIndex = 29;
-            this.btnCreateNewListener.Text = "Create New Listener";
-            this.btnCreateNewListener.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnCreateNewListener.Click += new System.EventHandler(this.btnCreateNewListener_Click);
-            // 
-            // metroLabel25
-            // 
-            this.metroLabel25.AutoSize = true;
-            this.metroLabel25.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel25.Location = new System.Drawing.Point(436, 22);
-            this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(104, 25);
-            this.metroLabel25.TabIndex = 28;
-            this.metroLabel25.Text = "Set Options:";
-            this.metroLabel25.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lstStagers
-            // 
-            this.lstStagers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lstStagers.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstStagers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lstStagers.FormattingEnabled = true;
-            this.lstStagers.ItemHeight = 15;
-            this.lstStagers.Items.AddRange(new object[] {
-            "Supported Stager Types"});
-            this.lstStagers.Location = new System.Drawing.Point(189, 22);
-            this.lstStagers.Name = "lstStagers";
-            this.lstStagers.Size = new System.Drawing.Size(224, 574);
-            this.lstStagers.Sorted = true;
-            this.lstStagers.TabIndex = 25;
-            this.lstStagers.SelectedIndexChanged += new System.EventHandler(this.lstStagers_SelectedIndexChanged);
-            // 
-            // metroLabel22
-            // 
-            this.metroLabel22.AutoSize = true;
-            this.metroLabel22.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel22.Location = new System.Drawing.Point(17, 19);
-            this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(166, 25);
-            this.metroLabel22.TabIndex = 5;
-            this.metroLabel22.Text = "Select a Stager Type:";
-            this.metroLabel22.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnClearOptions
-            // 
-            this.btnClearOptions.Location = new System.Drawing.Point(956, 313);
-            this.btnClearOptions.Name = "btnClearOptions";
-            this.btnClearOptions.Size = new System.Drawing.Size(153, 106);
-            this.btnClearOptions.TabIndex = 3;
-            this.btnClearOptions.Text = "Clear Options";
-            this.btnClearOptions.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnClearOptions.Click += new System.EventHandler(this.btnClearOptions_Click);
-            // 
-            // btnGenerateStager
-            // 
-            this.btnGenerateStager.Location = new System.Drawing.Point(956, 201);
-            this.btnGenerateStager.Name = "btnGenerateStager";
-            this.btnGenerateStager.Size = new System.Drawing.Size(153, 106);
-            this.btnGenerateStager.TabIndex = 2;
-            this.btnGenerateStager.Text = "Generate Stager";
-            this.btnGenerateStager.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnGenerateStager.Click += new System.EventHandler(this.btnGenerateStager_Click);
-            // 
             // tabCredentials
             // 
+            this.tabCredentials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.tabCredentials.Controls.Add(this.lblAPIToken3);
             this.tabCredentials.Controls.Add(this.btnSyncCredentials);
             this.tabCredentials.Controls.Add(this.metroLabel24);
@@ -1764,14 +1667,14 @@
             this.dgCredentials.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgCredentials.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.dgCredentials.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCredentials.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCredentials.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgCredentials.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCredentials.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCredID,
@@ -1831,6 +1734,115 @@
             this.colCredPassword.Name = "colCredPassword";
             this.colCredPassword.ReadOnly = true;
             // 
+            // tabGenerateStager
+            // 
+            this.tabGenerateStager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.tabGenerateStager.Controls.Add(this.metroLabel27);
+            this.tabGenerateStager.Controls.Add(this.lblAPIToken1);
+            this.tabGenerateStager.Controls.Add(this.btnCreateNewListener);
+            this.tabGenerateStager.Controls.Add(this.metroLabel25);
+            this.tabGenerateStager.Controls.Add(this.lstStagers);
+            this.tabGenerateStager.Controls.Add(this.metroLabel22);
+            this.tabGenerateStager.Controls.Add(this.btnClearOptions);
+            this.tabGenerateStager.Controls.Add(this.btnGenerateStager);
+            this.tabGenerateStager.HorizontalScrollbarBarColor = true;
+            this.tabGenerateStager.Location = new System.Drawing.Point(4, 35);
+            this.tabGenerateStager.Name = "tabGenerateStager";
+            this.tabGenerateStager.Size = new System.Drawing.Size(1131, 631);
+            this.tabGenerateStager.TabIndex = 2;
+            this.tabGenerateStager.Text = "Generate Stager";
+            this.tabGenerateStager.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabGenerateStager.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel27
+            // 
+            this.metroLabel27.AutoSize = true;
+            this.metroLabel27.Location = new System.Drawing.Point(944, 19);
+            this.metroLabel27.Name = "metroLabel27";
+            this.metroLabel27.Size = new System.Drawing.Size(156, 95);
+            this.metroLabel27.TabIndex = 31;
+            this.metroLabel27.Text = "To Do:\r\nBack Color - 34,34,34\r\nFore Color - 172, 179, 181\r\n\r\n(On listboxes)";
+            this.metroLabel27.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lblAPIToken1
+            // 
+            this.lblAPIToken1.AutoSize = true;
+            this.lblAPIToken1.Location = new System.Drawing.Point(1034, 612);
+            this.lblAPIToken1.Name = "lblAPIToken1";
+            this.lblAPIToken1.Size = new System.Drawing.Size(66, 19);
+            this.lblAPIToken1.TabIndex = 30;
+            this.lblAPIToken1.Text = "API Token";
+            this.lblAPIToken1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btnCreateNewListener
+            // 
+            this.btnCreateNewListener.Location = new System.Drawing.Point(956, 425);
+            this.btnCreateNewListener.Name = "btnCreateNewListener";
+            this.btnCreateNewListener.Size = new System.Drawing.Size(153, 106);
+            this.btnCreateNewListener.TabIndex = 29;
+            this.btnCreateNewListener.Text = "Create New Listener";
+            this.btnCreateNewListener.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnCreateNewListener.Click += new System.EventHandler(this.btnCreateNewListener_Click);
+            // 
+            // metroLabel25
+            // 
+            this.metroLabel25.AutoSize = true;
+            this.metroLabel25.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel25.Location = new System.Drawing.Point(436, 22);
+            this.metroLabel25.Name = "metroLabel25";
+            this.metroLabel25.Size = new System.Drawing.Size(104, 25);
+            this.metroLabel25.TabIndex = 28;
+            this.metroLabel25.Text = "Set Options:";
+            this.metroLabel25.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lstStagers
+            // 
+            this.lstStagers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.lstStagers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstStagers.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstStagers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(179)))), ((int)(((byte)(181)))));
+            this.lstStagers.FormattingEnabled = true;
+            this.lstStagers.ItemHeight = 15;
+            this.lstStagers.Items.AddRange(new object[] {
+            "Supported Stager Types"});
+            this.lstStagers.Location = new System.Drawing.Point(189, 22);
+            this.lstStagers.Name = "lstStagers";
+            this.lstStagers.Size = new System.Drawing.Size(224, 570);
+            this.lstStagers.Sorted = true;
+            this.lstStagers.TabIndex = 25;
+            this.lstStagers.SelectedIndexChanged += new System.EventHandler(this.lstStagers_SelectedIndexChanged);
+            // 
+            // metroLabel22
+            // 
+            this.metroLabel22.AutoSize = true;
+            this.metroLabel22.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel22.Location = new System.Drawing.Point(17, 19);
+            this.metroLabel22.Name = "metroLabel22";
+            this.metroLabel22.Size = new System.Drawing.Size(166, 25);
+            this.metroLabel22.TabIndex = 5;
+            this.metroLabel22.Text = "Select a Stager Type:";
+            this.metroLabel22.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btnClearOptions
+            // 
+            this.btnClearOptions.Location = new System.Drawing.Point(956, 313);
+            this.btnClearOptions.Name = "btnClearOptions";
+            this.btnClearOptions.Size = new System.Drawing.Size(153, 106);
+            this.btnClearOptions.TabIndex = 3;
+            this.btnClearOptions.Text = "Clear Options";
+            this.btnClearOptions.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClearOptions.Click += new System.EventHandler(this.btnClearOptions_Click);
+            // 
+            // btnGenerateStager
+            // 
+            this.btnGenerateStager.Location = new System.Drawing.Point(956, 201);
+            this.btnGenerateStager.Name = "btnGenerateStager";
+            this.btnGenerateStager.Size = new System.Drawing.Size(153, 106);
+            this.btnGenerateStager.TabIndex = 2;
+            this.btnGenerateStager.Text = "Generate Stager";
+            this.btnGenerateStager.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnGenerateStager.Click += new System.EventHandler(this.btnGenerateStager_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1844,17 +1856,17 @@
             this.tabActiveAgents.ResumeLayout(false);
             this.tabActiveAgents.PerformLayout();
             this.tabOptions.ResumeLayout(false);
-            this.tabModules.ResumeLayout(false);
-            this.tabModules.PerformLayout();
             this.tabListeners.ResumeLayout(false);
             this.tabListeners.PerformLayout();
             this.ctrlListeners.ResumeLayout(false);
             this.ctrlListeners.PerformLayout();
-            this.tabGenerateStager.ResumeLayout(false);
-            this.tabGenerateStager.PerformLayout();
+            this.tabModules.ResumeLayout(false);
+            this.tabModules.PerformLayout();
             this.tabCredentials.ResumeLayout(false);
             this.tabCredentials.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCredentials)).EndInit();
+            this.tabGenerateStager.ResumeLayout(false);
+            this.tabGenerateStager.PerformLayout();
             this.ResumeLayout(false);
 
         }

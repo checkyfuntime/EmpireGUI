@@ -37,13 +37,10 @@ namespace EmpireGUI
                 }
                 catch (WebException ex)
                 {
-                    MessageBox.Show(ex.ToString());
+                    EmpireGUI.frmMain.displayCustomAlert("(" + ex.Status + ") " + ex.Message);
                     return;
                 }
-
-                //Globals.apitoken = txtAPIToken.Text;
                 Globals.apitoken = txtAPIToken.Text;
-                //MessageBox.Show(Globals.apitoken + "\r\n" + Globals.serverIP + "\r\n" + Globals.serverPort);
             }
             else if (tglAPI.Checked == false)
             {
@@ -52,7 +49,6 @@ namespace EmpireGUI
                     string uri = "https://" + Globals.serverIP + ":" + Globals.serverPort + "/api/admin/login";
                     WebClient wc = new WebClient();
                     string json = @"{""username"":""" + txtUsername.Text + @""", ""password"":""" + txtPassword.Text + @"""}";
-                    //MessageBox.Show(uri + "\r\n\r\n" + json);
                     wc.Headers[HttpRequestHeader.ContentType] = @"application/json";
                     wc.Headers[HttpRequestHeader.UserAgent] = "Empire GUI 1.0";
                     string results = wc.UploadString(uri, json);
@@ -64,7 +60,7 @@ namespace EmpireGUI
                 catch (WebException ex)
                 {
                     //ToDO: Different Error messages depending on reasoning.
-                    MessageBox.Show(ex.ToString());
+                    EmpireGUI.frmMain.displayCustomAlert("(" + ex.Status + ") " + ex.Message);
                     return;
                 }
                 frmMain mainfrm = new frmMain();
@@ -93,6 +89,11 @@ namespace EmpireGUI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
         }
     }
 }

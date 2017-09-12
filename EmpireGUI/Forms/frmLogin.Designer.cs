@@ -95,7 +95,7 @@
             this.txtServerAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtServerAddress.Size = new System.Drawing.Size(192, 23);
             this.txtServerAddress.TabIndex = 2;
-            this.txtServerAddress.Text = "192.168.0.102";
+            this.txtServerAddress.Text = "192.168.2.157";
             this.txtServerAddress.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txtServerPort
@@ -211,6 +211,7 @@
             this.Name = "frmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
