@@ -74,7 +74,7 @@
             this.txtUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUsername.Size = new System.Drawing.Size(192, 23);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.Text = "checky";
+            this.txtUsername.Text = "empireadmin";
             this.txtUsername.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txtPassword
@@ -85,7 +85,7 @@
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassword.Size = new System.Drawing.Size(192, 23);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "@YWitb13";
+            this.txtPassword.Text = "empireadmin";
             this.txtPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txtServerAddress
